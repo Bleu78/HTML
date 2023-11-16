@@ -1,0 +1,16 @@
+h1 {
+    color: rgb(0, 4, 255);
+    font: sans-serif;
+  }
+  h2 {
+    color: black;
+    font: sans-serif;
+  }
+  p {
+    color: darkblue;
+    font: small;
+  }
+  .text-1{
+    background-color: aquamarine;
+  }
+
