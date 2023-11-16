@@ -13,4 +13,13 @@ h1 {
   .text-1{
     background-color: aquamarine;
   }
+  .underline{
+     text-decoration: underline;
+  }
+.text-right{
+  text-align: right;
+}
 
+#header-1{
+  text-transform: uppercase;
+}
