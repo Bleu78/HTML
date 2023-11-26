@@ -12,6 +12,16 @@
   background: rgb(48, 202, 219);
 }
 
-/* .container{
-    @include flexCenter();
- } *//*# sourceMappingURL=style.css.map */
+.Nest {
+  height: 65px;
+  padding: 30px;
+  margin: 20px;
+  background-color: green;
+  border: 5px solid red;
+}
+
+.Fl-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=style.css.map */
