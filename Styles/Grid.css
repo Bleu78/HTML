@@ -1,0 +1,5 @@
+.grid-container{
+    display: grid;
+    grid: 150px 50px/ auto auto auto 150px 100px;
+    
+}
