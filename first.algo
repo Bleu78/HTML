@@ -1,0 +1,38 @@
+ALGORITHM addThreeNums
+VAR
+    num1 : INTEGER;
+    num2, num3 : INTEGER;
+    sum : INTEGER := 0;
+CONST
+    pi : FLOAT := 3.17;
+    name : STRING := "Salem";
+BEGIN
+    Write("Enter first number: ")
+    Read(num1)
+    Read(num2)
+    Read(num3)
+
+    sum := num1 + num2 + num3
+
+    Write(sum)
+
+    sum = 10;
+
+    Write(sum)
+END
+
+ALGORITHM multiplyTwoNums
+VAR
+    a : INTEGER;
+    b : INTEGER;
+    result : INTEGER := 0;
+BEGIN
+    Write("Enter first number: ");
+    Read(a)
+    Write("Enter second number: ")
+    Read(b)
+
+    result := a * b
+
+    Write(result)
+END
