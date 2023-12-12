@@ -1,0 +1,28 @@
+ALGORITHM ticketing
+VAR
+    ticket_price : INTEGER := 20;
+    age : INTEGER;
+    gender: STRING;
+BEGIN
+    Read(gender);
+    Read(age)
+
+    IF (age <= 16) THEN
+        ticket_price = ticket_price / 2;
+    ELSE_IF(age >= 50) THEN
+        ticket_price = ticket_price / 1.25; // ticket_price * 0.75
+        ticket_price = (75/100) * 20
+    ELSE_IF(age >= 35 AND age <= 45) THEN
+        ticket_price = ticket_price / 1.10; //ticket_price * 0.90
+    ELSE
+        ticket_price = 20
+    END_IF
+
+    IF(gender == "Male") THEN
+        Write("You are a male")
+    ELSE_IF(gender == "Female") THEN
+        Write("You are a female")
+    ELSE
+        Write("You gender is not allowed")
+    END_IF
+END
