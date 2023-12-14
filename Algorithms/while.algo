@@ -1,0 +1,20 @@
+ALGORITHM iterative_while
+VAR
+    counter: INTEGER := 0;
+    // number is the number to test
+    number: INTEGER := 100;
+
+BEGIN
+    Read(number)
+
+    WHILE (number % 2 = 0 ) DO
+        /* while the condition is true
+        then it will repeat the instruction
+        until the condition will be false 
+        */
+        counter := counter + 1; // increment the count by 1
+        number := number / 2; // every time we divide the number n by 2 and
+    END_WHILE
+
+    Write(number + " is divisble by 2 " + counter + " times")
+END

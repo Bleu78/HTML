@@ -1,0 +1,89 @@
+ALGORITHM traverse_array
+VAR
+    //{2, 5, 5, 5, ..... , 2, 5}
+    numbers : ARRAY_OF INTEGER[5] := {4, 5, 6, 6, 3}; // declaring the array and define its length.
+    n : INTEGER; // declaring the index for each element in the array.
+BEGIN
+    // numbers := {1,2,3,5,7}; // inserting the elements directly in the array.
+    Write("Print Array :")
+    
+    //Untrusted version 
+    FOR n FROM 0 TO 5 STEP 1 DO   // the index of arrays start from 0;
+        Write(numbers[n]) // to access the element, we use the name_array[indexation]
+        // Write(numbers[0]);// n = 0
+        // Write(numbers[1]);// n = 1
+        // Write(numbers[2]);
+        // Write(numbers[3])        
+    END_FOR
+
+    // Trusted version
+    FOR i FROM 0 TO tab.length STEP 1  DO
+        Write(tab[i])
+    END_FOR
+END
+
+ALGORITHM insertion_array
+VAR
+    tab : ARRAY_OF INTEGER[5];
+    i : INTEGER;
+    sum: INTEGER := 0;
+BEGIN
+    FOR i FROM 0 TO tab.length STEP 1 DO
+        Read(tab[i]);// insert from user {3, 5, 1, 9, 7}
+        sum = sum + tab[i];
+        // tab[0] = 3
+        // tab[1] = 5
+        // tab[2] = 1
+        // ...
+        // tab[4] = 7 
+    END_FOR
+
+    Write(sum);//25
+END
+
+
+ALGORITHM search_array
+VAR
+    tab : ARRAY_OF INTEGER[5] := {3, 5, 2, 9, 1};
+    i, item : INTEGER;
+BEGIN
+    Write("What element do you want to search for");
+    Read(item);// For example: 4
+
+    i := 0;
+    // FOR i FROM 0 To tab.length STEP 1 DO 
+    WHILE (i < tab.length) DO
+        IF (tab[i] = item) THEN
+            BREAK; // element is found let break the loop
+        END_IF
+        i := i+1; // update index
+    END_WHILE
+
+    IF (i >= tab.length) THEN  // we reached the end of array without finding the element
+        Write("Element not found");
+    ELSE
+        Write("The element found at position ", i);
+    END_IF
+END
+
+
+ALGORITHM deletion_array
+VAR
+    tab : ARRAY_OF INTEGER[5] := {3, 5, 4, 9, 1};
+    i, pos : INTEGER;
+BEGIN
+    Write("give the position to delete");
+    Read(pos);//4
+
+    i := pos;
+    WHILE (i < tab.length) DO
+        IF(i = tab.length - 1)
+            tab[i] = ""
+        ELSE
+            tab[i] := tab[i+1]; // translation from right to left
+        END_IF
+        i := i+1; // update index
+    END_WHILE
+
+    // remember the tab.length is decreased by 1.
+END
