@@ -1,26 +1,27 @@
-ALGORITHM test
-VAR
-    row: INTEGER := 4;
-    col: INTEGER := 5;
-    matrix : ARRAY_OF INTEGER[row][col];
-    i, j : INTEGER;
+ALGORITHM Test // Algorithm name
+VAR     // Variables ( these are locations where data is stored which can be used anytime inside a program ) whose values can change
+    row: INTEGER := 4;      // Variable with an INTEGER data type which declares 4 as the assigned initial value.
+    col: INTEGER := 5;      // Variable with an INTEGER data type which declares 5 as the assigned initial value.
+    matrix : ARRAY_OF INTEGER[row][col];      // Variable carrying an ARRAY with Rows & Columns INTEGER data types.
+    i, j : INTEGER;       // Two Variables written linearly or sequentially with an INTEGER data type without declaration of any assigned value.
     // value : INTEGER;
 
-    test : CHAR := "T";
-    str : STRING[10] := "Nathan";
-    str : STRING := "GoMyCode";
-    str : STRING[] := {"G","o","M","y","C","o","d","e"};
+    // test : CHAR := "T";  // test is a variable with a CHAR data type which has "T" as it's initial value.
+    // **There are three ways of declaring a variable**
+    str : STRING[10] := "Nathan";    // Str is a variable with a STRING data type that can accomodate a maximum length of 10 characters and declares "Nathan" as it's assigned initial values.
+    str : STRING := "GoMyCode";      // Str is a variable with a STRING data type which declares "GoMyCode" as it's assigned initial value.
+    str : STRING[] := {"G","o","M","y","C","o","d","e"};   // Str is a variable with a STRING data type that can accomodate unlimited length of characters and contains the {"G","o","M","y","C","o","d","e"} as it's assigned initial value.
 
-BEGIN
-    FOR i FROM 0 TO str.length STEP 2 DO
-        Write(str[i])
-        Write("G")
-        Write("o")
-        Write("M")
-    END_FOR 
+BEGIN     // This is where the actual instructions takes place.
+    FOR i FROM 0 TO str.length STEP 2 DO    // This is the intialization expression, Condition, Update expression
+        Write(str[i])    // This represents Output display
+        Write("G")       // This represents Output display and it's having "G" as the output display
+        Write("o")       // This represents Output display and it's having "O" as the output display
+        Write("M")       // This represents Output display and it's having "M" as the output display
+    END_FOR  // This is the end of the FOR instruction.
 
-    FOR i FROM 0 TO row-1 STEP 1 DO // Row loop
-        FOR j FROM 0 TO col-1 STEP 1 DO //Column loop
+    FOR i FROM 0 TO row-1 STEP 1 DO // Row loop   // This is the intialization expression, Condition, Update expression
+        FOR j FROM 0 TO col-1 STEP 1 DO //Column loop   // This is the intialization expression, Condition, Update expression
             matrix[i][j] := i * j;
             matrix[1][0] := 2;
             matrix[1][1] := 2;
