@@ -1,0 +1,25 @@
+ALGORITHM delete_blank_begin
+VAR
+    str : STRING[] := "   GoMyCode";
+    str : STRING[] := " GoMyCode";
+    i : INTEGER := 0;
+    j : INTEGER := 0;
+BEGIN
+    WHILE ( str[0]=' ') DO
+        j := 0;
+        // FOR i FROM 0 TO str.length STEP 1 DO
+        //     // str[i+1] := str[i]; // translation from left to right
+        //     str[i] := str[i+1]; // translation from right to left
+        //     str[0] = "G"
+        //     str[1] = "o"
+        //     str[2] = "M"
+        //     str[3] = "y"
+        //     ...
+        //     str[7] = "e"
+        // END_FOR
+        WHILE (j < str.length) DO
+            str[j] := str[j+1]; // translation from right to left
+            j := j+1; // update index
+        END_WHILE
+    END_WHILE
+END
