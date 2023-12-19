@@ -22,7 +22,7 @@ BEGIN     // This is where the actual instructions takes place.
 
     FOR i FROM 0 TO row-1 STEP 1 DO // Row loop   // This is the intialization expression, Condition, Update expression
         FOR j FROM 0 TO col-1 STEP 1 DO //Column loop   // This is the intialization expression, Condition, Update expression
-            matrix[i][j] := i * j;
+            matrix[i][j] := i * j;  // The Matrix variable is carrying an index of i and J which will carry the sum of i * j as it's initial value.
             matrix[1][0] := 2;
             matrix[1][1] := 2;
             matrix[1][2] := 2;

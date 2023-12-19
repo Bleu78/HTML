@@ -5,7 +5,7 @@ VAR
     i : INTEGER := 0;
     j : INTEGER := 0;
 BEGIN
-    WHILE ( str[0]=' ') DO
+    WHILE ( str[0]=" ") DO
         j := 0;
         // FOR i FROM 0 TO str.length STEP 1 DO
         //     // str[i+1] := str[i]; // translation from left to right
