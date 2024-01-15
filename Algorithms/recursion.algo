@@ -1,0 +1,73 @@
+FUNCTION pow(x: INTEGER, n: INTEGER) : INTEGER
+VAR
+    result: INTEGER;
+BEGIN
+    if(n = 1)
+        RETURN x;
+    ELSE
+        result = pow(x, n-1);
+        RETURN x * result;
+
+        /*
+        Explanation
+        result = pow(x, 3-1); // x = 3, n = 2
+        RETURN x * result; // x = 3, result = 9, return 3 * 9
+        result = pow(x, 2-1); // x = 3, n = 1, result = 3
+        RETURN x * result; // x = 3, result = 3, return 3 * 3*/
+        
+        
+        /*result = pow(x, 2-1);//n = 1 => 2
+        RETURN x * result; // x = 2 */
+
+    END_IF
+END
+
+FUNCTION fact(n) : INTEGER
+VAR 
+    result : INTEGER;
+BEGIN
+    IF (n = 0) THEN //
+        result := 1; // results of the factorial of 0 is 1
+    ELSE
+        //5! = 5 * 4 * 3 * 2 * 1
+        //5! = 5 * 4 (5 - 1) * 3 (4 - 1) * 2 (3- 1) * 1
+        result := n * fact(n-1); // n! = n * (n-1)!
+
+        /* Explanation
+        fact(5) := 5 * fact(4); n = 5, result = 120
+        fact(4) := 4 * fact(3); n = 4, result = 24
+        fact(3) := 3 * fact(2); n = 3, result = 6
+        fact(2) := 2 * fact(1); n = 2, result = 2
+        fact(1) := 1 * fact(0); n = 1, ; result = 1
+        fact(0); result = 1
+        */
+    END_IF
+    RETURN results ;
+END
+
+
+0 1 1 2 3 5 8 13 21 34
+FUNCTION fibbonacci(n: INTEGER) : INTEGER
+    IF (n=0) THEN
+        RETURN 0;
+    ELSE_IF (n=1) THEN
+        RETURN 1
+    ELSE
+        RETURN fibbonacci(n-1) + fibbonacci(n-2);// f(9) + f(8)
+
+        /*
+        Explanation
+        fibbonacci(n-1) + fibbonacci(n-2); n = f(10) => f(9) + f(8)
+        fibbonacci(n-1) + fibbonacci(n-2); n = f(9) => f(8) + f(7) => 34
+        fibbonacci(n-1) + fibbonacci(n-2); n = f(8) => f(7) + f(6) => 21
+        fibbonacci(n-1) + fibbonacci(n-2); n = f(7) => f(6) + f(5) => 13
+        fibbonacci(n-1) + fibbonacci(n-2); n = f(6) => f(5) + f(4) => 8
+        fibbonacci(n-1) + fibbonacci(n-2); n = f(5) => f(4) + f(3) => 5
+        fibbonacci(n-1) + fibbonacci(n-2); n = f(4) => f(3) + f(2) => 3
+        fibbonacci(n-1) + fibbonacci(n-2); n = f(3) => f(2) + f(1) => 2
+        fibbonacci(n-1) + fibbonacci(n-2); n = f(2) => f(1) + f(0) => 1
+        f(1) => 1; 
+        f(0) = 0
+        */
+    END_IF
+END
